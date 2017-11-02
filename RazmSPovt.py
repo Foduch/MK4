@@ -1,3 +1,4 @@
+from time import time
 m = 9
 n = 6
 x = [9 for i in range(n)]
@@ -26,6 +27,7 @@ def incr(x, m):
     #print(incr(x, 9))            
             
 def sb():
+    st = time()
     res = 0
     x = [0 for i in range(6)]
     incr(x, 9)
@@ -34,5 +36,6 @@ def sb():
         if (sum(x[0:3]) == sum(x[3:])):
             res += 1
             #print(x)
+    print(time()-st)
     return res
 
